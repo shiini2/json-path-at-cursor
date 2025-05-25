@@ -51,7 +51,9 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "test:mocha": "mocha -r ts-node/register src/test/**/*.ts",
+    "test:mocha:logic": "mocha -r ts-node/register src/test/jsonPath.test.ts"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
@@ -62,6 +64,8 @@
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.5.2",
     "eslint": "^9.25.1",
+    "mocha": "^11.5.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "dependencies": {

@@ -21,8 +21,8 @@ export function getJsonPathAtOffset(
 
   // Handle case: cursor is after a comma, return previous property
   let adjustedOffset = offset;
-  // Move offset back if it's on or after a comma (and skip whitespace)
-  while (adjustedOffset > 0 && /[\s,]/.test(text[adjustedOffset - 1])) {
+  // Move offset back if it's on or after a comma or a colon (and skip whitespace)
+  while (adjustedOffset > 0 && /[\s,:]/.test(text[adjustedOffset - 1])) {
     adjustedOffset--;
   }
 
