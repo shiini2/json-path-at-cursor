@@ -1,7 +1,13 @@
 {
-  "name": "json-path-finder",
-  "displayName": "json-path-finder",
-  "description": " Get the JSON path at the cursor",
+  "name": "json-path-at-cursor",
+  "displayName": "JSON Path at Cursor",
+  "description": "Get the JSON path at the cursor position in JSON/JSONC files.",
+  "publisher": "shini",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiini2/json-path-at-cursor.git"
+  },
+  "license": "MIT",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.100.0"
@@ -14,9 +20,9 @@
   "contributes": {
     "commands": [
       {
-        "command": "jsonPathFinder.getJsonPath",
+        "command": "jsonPathAtCursor.getJsonPath",
         "title": "Get JSON Path at Cursor",
-        "category": "JSON Path Finder",
+        "category": "JSON Path at Cursor",
         "icon": {
           "light": "images/icon-light.png",
           "dark": "images/icon-dark.png"
@@ -26,14 +32,14 @@
     "menus": {
       "editor/context": [
         {
-          "command": "jsonPathFinder.getJsonPath",
+          "command": "jsonPathAtCursor.getJsonPath",
           "when": "editorLangId == json || editorLangId == jsonc"
         }
       ]
     },
     "keybindings": [
       {
-        "command": "jsonPathFinder.getJsonPath",
+        "command": "jsonPathAtCursor.getJsonPath",
         "key": "shift+alt+/",
         "when": "editorLangId == json || editorLangId == jsonc"
       }

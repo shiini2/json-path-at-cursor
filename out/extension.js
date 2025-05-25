@@ -35,17 +35,17 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.activate = activate;
 // extension.ts
-// Main entry point for the jsonPathFinder VS Code extension.
+// Main entry point for the JSON Path at Cursor VS Code extension.
 const vscode = __importStar(require("vscode"));
 const jsonPath_1 = require("./jsonPath");
 /**
- * Activates the jsonPathFinder extension.
+ * Activates the JSON Path at Cursor extension.
  * Registers the command to get the JSON path at the current cursor position.
  * @param context - The VS Code extension context.
  */
 function activate(context) {
     // Register the command for retrieving the JSON path at the cursor
-    const disposable = vscode.commands.registerCommand("jsonPathFinder.getJsonPath", async () => {
+    const disposable = vscode.commands.registerCommand("jsonPathAtCursor.getJsonPath", async () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
             vscode.window.showErrorMessage("No active editor found.");

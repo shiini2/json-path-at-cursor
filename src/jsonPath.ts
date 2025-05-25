@@ -1,5 +1,5 @@
 // jsonPath.ts
-// Utility for extracting the JSON path at a given cursor offset in a JSON document.
+// Utility for extracting the JSON path at a given cursor offset in a JSON document for the JSON Path at Cursor extension.
 import * as jsonc from "jsonc-parser";
 
 /**

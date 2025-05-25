@@ -1,17 +1,17 @@
 // extension.ts
-// Main entry point for the jsonPathFinder VS Code extension.
+// Main entry point for the JSON Path at Cursor VS Code extension.
 import * as vscode from "vscode";
 import { getJsonPathAtOffset } from "./jsonPath";
 
 /**
- * Activates the jsonPathFinder extension.
+ * Activates the JSON Path at Cursor extension.
  * Registers the command to get the JSON path at the current cursor position.
  * @param context - The VS Code extension context.
  */
 export function activate(context: vscode.ExtensionContext) {
   // Register the command for retrieving the JSON path at the cursor
   const disposable = vscode.commands.registerCommand(
-    "jsonPathFinder.getJsonPath",
+    "jsonPathAtCursor.getJsonPath",
     async () => {
       const editor = vscode.window.activeTextEditor;
       if (!editor) {

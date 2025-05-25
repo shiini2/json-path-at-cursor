@@ -35,7 +35,7 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getJsonPathAtOffset = getJsonPathAtOffset;
 // jsonPath.ts
-// Utility for extracting the JSON path at a given cursor offset in a JSON document.
+// Utility for extracting the JSON path at a given cursor offset in a JSON document for the JSON Path at Cursor extension.
 const jsonc = __importStar(require("jsonc-parser"));
 /**
  * Returns the JSON path at the given offset in the provided JSON text.

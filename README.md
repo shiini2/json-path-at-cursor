@@ -1,6 +1,6 @@
-# jsonPathFinder
+# JSON Path at Cursor
 
-jsonPathFinder is a Visual Studio Code extension that allows you to quickly retrieve the JSON path at your current cursor position in any JSON or JSONC file. This is especially useful for debugging, documentation, or when working with tools that require JSON path expressions.
+JSON Path at Cursor is a Visual Studio Code extension that allows you to quickly retrieve the JSON path at your current cursor position in any JSON or JSONC file. This is especially useful for debugging, documentation, or when working with tools that require JSON path expressions.
 
 ## Features
 
@@ -13,7 +13,7 @@ jsonPathFinder is a Visual Studio Code extension that allows you to quickly retr
 
 1. Open a JSON or JSONC file in VS Code.
 2. Place your cursor anywhere inside the JSON structure.
-3. Run the command **Get JSON Path at Cursor** (search for `jsonPathFinder: Get JSON Path at Cursor` in the Command Palette, or bind it to a shortcut).
+3. Run the command **Get JSON Path at Cursor** (search for `JSON Path at Cursor: Get JSON Path at Cursor` in the Command Palette, or use the shortcut).
 4. The JSON path will be shown in an information message, with an option to copy it to your clipboard.
 
 ## Example
