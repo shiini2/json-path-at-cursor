@@ -10,4 +10,5 @@ All notable changes to this project will be documented in this file.
 - Accurate path resolution for nested objects and arrays.
 - Clipboard integration for easy copying.
 - Handles property names with special characters using bracket notation.
-- Return correct property when cursor is after right after the colon.
+- Return correct property when cursor is right after the colon.
+- Add mac shortcut.

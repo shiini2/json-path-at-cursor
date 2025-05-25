@@ -41,6 +41,7 @@
       {
         "command": "jsonPathAtCursor.getJsonPath",
         "key": "shift+alt+/",
+        "mac": "shift+cmd+/",
         "when": "editorLangId == json || editorLangId == jsonc"
       }
     ]
@@ -70,5 +71,10 @@
   },
   "dependencies": {
     "jsonc-parser": "^3.3.1"
-  }
+  },
+  "homepage": "https://github.com/shiini2/json-path-at-cursor#readme",
+  "bugs": {
+    "url": "https://github.com/shiini2/json-path-at-cursor/issues"
+  },
+  "icon": "images/icon-light.png"
 }
