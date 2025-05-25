@@ -8,6 +8,7 @@ JSON Path at Cursor is a Visual Studio Code extension that allows you to quickly
 - Supports both standard JSON and JSON with comments (JSONC)
 - Copy the resulting path to your clipboard instantly
 - Works with nested objects and arrays, providing accurate paths
+- Works with unsaved files: The extension can retrieve JSON paths even in files that have not been saved, ensuring seamless functionality during quick edits or temporary changes.
 
 ## Usage
 
@@ -42,8 +43,13 @@ Given the following JSON:
 If your cursor is on the word `example`, the extension will show:
 
 ```
-dependencies.test[3].deep.oneMore["type"]
+dependencies.test[3].deep.oneMore.type
 ```
+
+**Notes:**  
+- **Dot notation** is used for property names that are valid JavaScript identifiers (letters, digits, underscores, and dollar signs, but not starting with a digit), for example: `dependencies.test`.
+
+- **Bracket notation** with quotes is used if a property name contains spaces, special characters, or starts with a digit, for example: `dependencies["date-fns"].deep`. This ensures all JSON paths are syntactically correct and unambiguous.
 
 ## Extension Settings
 
@@ -52,11 +58,21 @@ This extension does not add any custom settings. It works out of the box.
 ## Requirements
 
 - Visual Studio Code v1.100.0 or higher
+### Cursor Position Behavior
 
-## Known Issues
+- If the cursor is positioned immediately before the start of a key, the extension interprets the cursor as being closer to the previous key. This ensures consistent path resolution when navigating JSON structures.
 
-- Only works with files that are valid JSON or JSONC (with comments).
-- The path format is designed for code usage and may not match all third-party JSONPath libraries.
+  **Example:**  
+  If the cursor is right before `"secondKey"` in the following JSON:
+
+  ```json
+  {
+    "firstKey": 1,
+    "secondKey": 2
+  }
+  ```
+
+  The extension will return the path: `firstKey`
 
 ## Contributing
 
