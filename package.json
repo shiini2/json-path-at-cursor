@@ -1,0 +1,64 @@
+{
+  "name": "json-path-finder",
+  "displayName": "json-path-finder",
+  "description": " Get the JSON path at the cursor",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "jsonPathFinder.getJsonPath",
+        "title": "Get JSON Path at Cursor",
+        "category": "JSON Path Finder",
+        "icon": {
+          "light": "images/icon-light.png",
+          "dark": "images/icon-dark.png"
+        }
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "jsonPathFinder.getJsonPath",
+          "when": "editorLangId == json || editorLangId == jsonc"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "jsonPathFinder.getJsonPath",
+        "key": "shift+alt+/",
+        "when": "editorLangId == json || editorLangId == jsonc"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.100.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
+  }
+}
