@@ -52,8 +52,8 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
     "test": "vscode-test",
-    "test:mocha": "mocha -r ts-node/register src/test/**/*.ts",
-    "test:mocha:logic": "mocha -r ts-node/register src/test/jsonPath.test.ts"
+    "test:unit": "mocha -r ts-node/register src/test/jsonPath.test.ts",
+    "test:all": "npm run test:unit && npm test"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
