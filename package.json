@@ -8,7 +8,7 @@
     "url": "https://github.com/shiini2/json-path-at-cursor.git"
   },
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -52,9 +52,9 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test",
+    "test": "npm run test:unit && npm run test:extension",
     "test:unit": "mocha -r ts-node/register src/test/jsonPath.test.ts",
-    "test:all": "npm run test:unit && npm test"
+    "test:extension": "vscode-test"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
