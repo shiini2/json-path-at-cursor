@@ -1,4 +1,3 @@
-// jsonPath.ts
 // Utility for extracting the JSON path at a given cursor offset in a JSON document for the JSON Path at Cursor extension.
 import * as jsonc from "jsonc-parser";
 
@@ -19,9 +18,9 @@ export function getJsonPathAtOffset(
     return null;
   }
 
-  // Handle case: cursor is after a comma, return previous property
+  // Handle case: cursor is after a comma or colon, return previous property
   let adjustedOffset = offset;
-  // Move offset back if it's on or after a comma or a colon (and skip whitespace)
+  // Move offset back if it's after a comma or a colon (and skip whitespace)
   while (adjustedOffset > 0 && /[\s,:]/.test(text[adjustedOffset - 1])) {
     adjustedOffset--;
   }

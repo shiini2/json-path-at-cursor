@@ -1,4 +1,3 @@
-// extension.ts
 // Main entry point for the JSON Path at Cursor VS Code extension.
 import * as vscode from "vscode";
 import { getJsonPathAtOffset } from "./jsonPath";
