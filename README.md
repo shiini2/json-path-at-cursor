@@ -11,7 +11,7 @@ JSON Path at Cursor is a Visual Studio Code extension that instantly shows the J
 
 ## Usage
 
-1. Place your cursor anywhere within the JSON structure in an unsaved or JSON file.
+1. Place your cursor anywhere within the JSON structure in any JSON or JSONC file (including unsaved documents).
 2. **Run the command using one of these methods:**
   - **Keyboard Shortcut:**  
     - macOS: Press `Shift + Cmd + /`
@@ -88,21 +88,21 @@ Contributions are welcome! Please open issues or pull requests for bug fixes, im
 
 ## Release Notes
 
-## [0.0.1] - 2025-05-25
-### Added
+### [0.0.1] - 2025-05-25
+#### Added
 - Initial release: get JSON path at cursor and copy to clipboard.
 - Support for both JSON and JSONC files.
 - Accurate path resolution for nested objects and arrays.
 - Clipboard integration for easy copying.
 - Handles property names with special characters using bracket notation.
 
-## [0.0.2] - 2025-05-25
-### Added
+### [0.0.2] - 2025-05-25
+#### Added
 - Return correct property when cursor is right after the colon.
 - Add mac shortcut.
 
-## [0.0.3] - 2025-05-27
-### Changed
+### [0.0.3] - 2025-05-27
+#### Changed
 - Documentation update: improved and clarified README instructions.
 
 ## License
