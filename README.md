@@ -1,5 +1,5 @@
 # JSON Path at Cursor
-JSON Path at Cursor is a Visual Studio Code extension that instantly shows the JSON path at your cursor in any JSON or JSONC file. It's useful for debugging, documentation, or working with tools that use JSON path expressions.
+[JSON Path at Cursor](https://marketplace.visualstudio.com/items?itemName=shini.json-path-at-cursor) is a Visual Studio Code extension that instantly shows the JSON path at your cursor in any JSON or JSONC file. It's useful for debugging, documentation, or working with tools that use JSON path expressions.
 
 ## Features
 
